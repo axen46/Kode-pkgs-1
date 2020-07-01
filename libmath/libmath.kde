@@ -1,0 +1,9 @@
+fun gcd(a,b){
+	var r = a%b;
+	if(!r){
+		return b;
+	}
+	else{
+		return gcd(b,r);
+	}
+}
