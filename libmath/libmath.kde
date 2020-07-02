@@ -7,3 +7,19 @@ fun gcd(a,b){
 		return gcd(b,r);
 	}
 }
+
+fun isNumber(m)
+{
+	var g=0;
+	var b=0;
+	var c=String(m);
+	for(var w=0;w<len(c);w=w+1)if(c[w]=='.')g=g+1;
+	for(var v=0;v<len(c);v=v+1)if(c[v]=='-' and v!=0)b=b+1;
+	if(b>0 or g>1)return False;
+	else{var l=['.','-'];
+	for(var r=0;r<10;r=r+1)l.append(String(r));
+	var k=0;
+	for(var i=0;i<len(c);i=i+1){for(var j=0;j<12;j=j+1){if(c[i]==l[j])k=k+1;}}
+	if(k<len(c) or k==0)return False;
+	else return True;}
+}
