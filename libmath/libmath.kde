@@ -23,3 +23,11 @@ fun isNumber(m)
 	if(k<len(c) or k==0)return False;
 	else return True;}
 }
+fun gcdN(m,n) { 
+
+	if(m==n) return m;
+	else if(m==0) return n;
+	else if(n==0) return m;
+	else if(n>m) return gcdN(n,m);
+	else return gcdN(m%n,n);
+}
