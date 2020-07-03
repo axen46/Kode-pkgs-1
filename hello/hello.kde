@@ -1,0 +1,23 @@
+clear();
+var t=0;
+var b;
+print("\n\t A Program to find a natural number prime or not  ");
+print("\n\t========================================\n");
+var a=input("\n\tPlease enter any natural number:");
+var l=[];
+for(var r=0;r<10;r=r+1)l.append(String(r));
+var k=0;
+for(var i=0;i<len(a);i=i+1){for(var j=0;j<10;j=j+1){if(a[i]==l[j])k=k+1;}}
+if(k<len(a) or k==0){print("\n\n\tInvalid Input...!!!");print("\n\n\tPress enter for continue...\n\n\t");input();clear();exit();}
+else b=Number(a);
+var z=b**0.5;
+if(b==1)print("\n\n\t1 is neither prime nor composite number...!!!\n\nt\t");
+else if(b==2 or b==3)t=0;
+else if(b%2==0 and b>2)t=1;
+else for(var x=5;x<=z;x=x+2)if(b%x==0)t=1;
+if(t==1)print("\n\n\tThe number is not prime.\n\n\t");
+else print("\n\n\t ",b,"is a prime number.\n\n\t");
+print("\n\n\tPress enter for continue...\n\n\t");
+input("\t");
+clear();
+exit();
