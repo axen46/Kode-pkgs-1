@@ -1,3 +1,4 @@
+//Author - Apratim Sarkar
 fun gcd(a,b){
 	var r = a%b;
 	if(!r){
